@@ -1,6 +1,7 @@
 <script context="module">
 	export async function get({ params: { slug } }) {
-		const res = await fetch(`http://localhost:1337/posts?slug=${slug}`);
+		const url = '/posts';
+		const res = await fetch(`${url}?slug=${slug}.json`);
 
 		const Myarticle = await res.json();
 		if (res.ok) {

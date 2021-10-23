@@ -1,7 +1,8 @@
 <script context="module">
-	export async function load({ fetch }) {
-		const url = `http://localhost:1337/posts?=_sort=date:DESC&_limit=10`;
-		const data = await fetch(url);
+	export async function load({ page, fetch }) {
+		const term = page.params.term;
+		const url = 'http://localhost:1337/posts';
+		const data = await fetch(`${url}?categories.name_contains=${term}`);
 
 		if (data.ok) {
 			return { props: { posts: await data.json() } };
@@ -17,13 +18,14 @@
 <script>
 	import { scale } from 'svelte/transition';
 	import PostList from '../components/PostList.svelte';
-	export let posts = [];
+	let posts = [];
 </script>
 
 <head>
-	<title>Blog</title>
+	<title>Resultados</title>
 </head>
 <div class="container" in:scale>
+	<p>Resultados para <mark>xxxx</mark></p>
 	<div class="post-card">
 		{#each posts as post (post.id)}
 			<PostList {post} />

@@ -17,7 +17,7 @@
 
 		const articelRes = await fetch(url);
 
-		if (articelRes.ok) {
+		if (articelRes.ok && totalRes.ok) {
 			return {
 				props: {
 					posts: await articelRes.json(),
@@ -44,15 +44,23 @@
 	let lastPage = Math.ceil(total / 3);
 </script>
 
-<head>
+<svelte:head>
 	<title>Blog</title>
-</head>
+	<meta name="keywords" content="blog, svelte, sveltejs, svelte.dev, sveltejs.com," />
+</svelte:head>
+
 <div class="container" in:scale>
+	<!-- posts list component -->
 	<div class="post-card">
 		{#each posts as post (post.id)}
-			<PostList {post} />
+			{#if posts.length > 0}
+				<PostList {post} />
+			{:else}
+				<p>No posts found</p>
+			{/if}
 		{/each}
 	</div>
+	<!-- pagination -->
 	<Pagination {pagination} {lastPage} />
 </div>
 

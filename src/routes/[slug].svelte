@@ -27,9 +27,10 @@
 		<h1>
 			{post.title}
 		</h1>
-		<p>
-			{post.content}
-		</p>
+		<div>
+			{@html post.content}
+		</div>
+
 		<div class="author-box">
 			<img
 				src={post.writer.image.formats.thumbnail.url}

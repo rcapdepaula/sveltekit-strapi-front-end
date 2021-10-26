@@ -4,7 +4,7 @@
 
 <!--HTML here-->
 <footer class="container">
-	<h4>REDES SOCIAIS</h4>
+	<h4>SOCIAL MEDIA</h4>
 
 	<div class="social-media-icons">
 		<a href="https://twitter.com/redes_sociais" target="_blank" rel="noreferrer" alt="twitter">

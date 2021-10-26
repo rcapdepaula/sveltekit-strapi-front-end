@@ -2,7 +2,7 @@
 	export async function load({ page, fetch }) {
 		const term = page.query.get('term');
 		const url = 'http://localhost:1337/posts';
-		const data = await fetch(`${url}?description_contains=${term}`);
+		const data = await fetch(`${url}?categories.name_contains=${term}`);
 
 		if (data.ok) {
 			return { props: { posts: await data.json() } };
@@ -30,8 +30,6 @@
 		{#each posts as post (post.id)}
 			<div animate:flip={{ duration: 500 }}>
 				<PostList {post} />
-
-				<h1>No posts</h1>
 			</div>
 		{/each}
 	</div>

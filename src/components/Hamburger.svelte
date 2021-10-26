@@ -13,7 +13,7 @@
 		width: 30px;
 		height: 50px;
 		position: absolute;
-		top: 5px;
+		top: 18px;
 		right: 26px;
 		cursor: pointer;
 	}

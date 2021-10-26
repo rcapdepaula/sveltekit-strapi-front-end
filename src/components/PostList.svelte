@@ -1,11 +1,16 @@
 <script>
 	// Script will be here
 	export let post;
+	import { scale } from 'svelte/transition';
 </script>
 
 <!--HTML here-->
-<div>
-	<img src={post.image.formats.medium.url} alt={post.title} />
+<div in:scale out:scale|local>
+	{#if post.image}
+		<img src={post.image.formats.medium.url} alt={post.title} />
+	{:else}
+		<img src="images/900x600.png" alt={post.title} />
+	{/if}
 	<div class="mobile-display">
 		<h3>
 			<a href={post.slug}>
@@ -15,11 +20,16 @@
 		<p class="fade-truncate">
 			{post.description}
 		</p>
-		{#each post.categories as category (category.id)}
-			<a href={`search?term=${category.name}`}>
-				{category.name}
-			</a>
-		{/each}
+		<span class="categories">
+			<img src="images/folder-open-solid.svg" alt="categorias" class="icon-categories" />
+			{#each post.categories as category (category.id)}
+				<span class="category">
+					<a href={`/category?term=${category.name}`}>
+						{category.name}
+					</a>
+				</span>
+			{/each}
+		</span>
 	</div>
 </div>
 
@@ -60,5 +70,21 @@
 	}
 	p.fade-truncate {
 		font-family: 'Poppins', sans-serif;
+	}
+	.categories {
+		display: flex;
+		align-items: center;
+	}
+	.category {
+		margin-left: 10px;
+	}
+	@media (max-width: 768px) {
+		.icon-categories {
+			margin-left: 20px;
+		}
+	}
+	.icon-categories {
+		width: 20px;
+		height: 20px;
 	}
 </style>

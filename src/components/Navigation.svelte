@@ -9,9 +9,8 @@
 			<h1>LOGO</h1>
 		</a>
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="/about">Sobre</a></li>
+			<li><a href="#">Contato</a></li>
 		</ul>
 	</div>
 </nav>
@@ -33,8 +32,8 @@
 		list-style: none;
 		display: flex;
 		flex-direction: row;
-		height: 62px;
-		align-items: end;
+		height: 21px;
+		align-items: center;
 	}
 	nav ul li {
 		margin-left: 20px;
@@ -57,5 +56,7 @@
 		width: var(--max-width);
 		margin: 0 auto;
 		justify-content: space-between;
+		height: 83px;
+		align-items: end;
 	}
 </style>

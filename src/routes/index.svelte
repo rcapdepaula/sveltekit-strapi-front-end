@@ -1,14 +1,34 @@
 <script context="module">
-	export async function load({ fetch }) {
-		const url = `http://localhost:1337/posts?=_sort=date:DESC&_limit=10`;
-		const data = await fetch(url);
+	export async function load({ page, fetch }) {
+		const pagination = page.query.get('page') ?? 1;
 
-		if (data.ok) {
-			return { props: { posts: await data.json() } };
+		// calculate start page
+		const startPage = pagination ? parseInt(pagination) : 1;
+		// let startPage = +pagination === 1 ? 0 : (+pagination - 1) * 2;
+		console.log(pagination);
+
+		// fetch total/count
+		const totalUrl = `http://localhost:1337/posts/count`;
+		const totalRes = await fetch(totalUrl);
+		// // calculate last pages
+
+		// fecth articles
+		const url = `http://localhost:1337/posts?=_sort=date:DESC&_start=${startPage}&_limit=3`;
+
+		const articelRes = await fetch(url);
+
+		if (articelRes.ok) {
+			return {
+				props: {
+					posts: await articelRes.json(),
+					total: await totalRes.json(),
+					pagination: +pagination
+				}
+			};
 		}
 
 		return {
-			status: data.status,
+			status: articelRes.status,
 			error: new Error(`Could not load ${url}`)
 		};
 	}
@@ -17,7 +37,11 @@
 <script>
 	import { scale } from 'svelte/transition';
 	import PostList from '../components/PostList.svelte';
+	import Pagination from '../components/Pagination.svelte';
 	export let posts = [];
+	export let pagination;
+	export let total;
+	let lastPage = Math.ceil(total / 3);
 </script>
 
 <head>
@@ -29,6 +53,7 @@
 			<PostList {post} />
 		{/each}
 	</div>
+	<Pagination {pagination} {lastPage} />
 </div>
 
 <style>

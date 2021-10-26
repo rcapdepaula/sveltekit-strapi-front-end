@@ -4,6 +4,7 @@
 	import Navigation from './Navigation.svelte';
 	import Hamburger from './Hamburger.svelte';
 	import OverlayMenu from './OverlayMenu.svelte';
+	import SearchBar from './SearchBar.svelte';
 
 	let showOverlayMenu = false;
 
@@ -24,6 +25,8 @@
 	</span>
 </header>
 
+<SearchBar />
+
 <style>
 	/* styles here */
 
@@ -31,7 +34,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		height: 62px;
+		height: 80px;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;

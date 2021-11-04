@@ -33,4 +33,3 @@ adapter: netlify(),
 // 	}
 // };
 
-export default config;

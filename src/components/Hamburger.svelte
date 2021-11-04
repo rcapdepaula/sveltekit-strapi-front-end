@@ -10,10 +10,10 @@
 	/* styles here */
 
 	img {
-		width: 30px;
-		height: 50px;
+		width: 40px;
+		height: 40px;
 		position: absolute;
-		top: 13px;
+		top: 31px;
 		right: 26px;
 		cursor: pointer;
 	}
@@ -25,6 +25,11 @@
 	}
 
 	.img {
-		filter: invert(1);
+		filter: invert(100%);
+	}
+
+	.img:hover {
+		transform: scale(1.1);
+		transition: all 0.3s ease-in-out;
 	}
 </style>

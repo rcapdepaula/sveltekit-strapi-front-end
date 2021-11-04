@@ -5,12 +5,12 @@
 <!--HTML here-->
 <nav>
 	<div class="container">
-		<a href="/" class="logo-padding">
-			<h1>LOGO</h1>
+		<a href="/" class="logo-padding" alt="home">
+			<img src="images/logo-white.svg" alt="" class="logo" />
 		</a>
 		<ul>
-			<li><a href="/about">Sobre</a></li>
-			<li><a href="#">Contato</a></li>
+			<li><a href="/sobre">Sobre</a></li>
+			<li><a href="/contato">Contato</a></li>
 		</ul>
 	</div>
 </nav>
@@ -22,12 +22,12 @@
 			padding-left: 20px;
 		}
 	}
-	a h1 {
-		color: var(--white);
-		display: flex;
-		align-items: end;
+	.logo {
+		width: 220px;
+		height: auto;
+		max-width: 100%;
+		margin: 13px;
 	}
-
 	nav ul {
 		list-style: none;
 		display: flex;
@@ -56,7 +56,7 @@
 		width: var(--max-width);
 		margin: 0 auto;
 		justify-content: space-between;
-		height: 83px;
+		height: 92px;
 		align-items: end;
 	}
 </style>

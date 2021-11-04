@@ -11,6 +11,7 @@
 	{:else}
 		<img src="images/900x600.png" alt={post.title} />
 	{/if}
+
 	<div class="mobile-display">
 		<h3>
 			<a href={post.slug}>
@@ -29,6 +30,13 @@
 					</a>
 				</span>
 			{/each}
+
+			<div class="category">
+				<span class="date">
+					<img src="images/calendar-check-solid.svg" alt="date" class="icon-categories" />
+					<span style="margin-left: 10px;"> {new Date(post.created_at).toLocaleDateString()}</span>
+				</span>
+			</div>
 		</span>
 	</div>
 </div>
@@ -75,6 +83,12 @@
 		display: flex;
 		align-items: center;
 	}
+
+	@media (max-width: 768px) {
+		.categories {
+			justify-content: center;
+		}
+	}
 	.category {
 		margin-left: 10px;
 	}
@@ -86,5 +100,9 @@
 	.icon-categories {
 		width: 20px;
 		height: 20px;
+	}
+	.date {
+		display: flex;
+		align-items: center;
 	}
 </style>

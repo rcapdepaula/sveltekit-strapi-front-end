@@ -6,10 +6,20 @@
 {#if showOverlayMenu}
 	<div class="overlay-menu" in:scale out:scale>
 		<div class="inner">
-			<div class="inverted-logo">LOGO</div>
+			<div class="inverted-logo">
+				<img src="images/logo-white.svg" alt="logo" />
+			</div>
 
 			<ul>
-				<li>Menu 1</li>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/sobre">Sobre</a>
+				</li>
+				<li>
+					<a href="/contato">Contato</a>
+				</li>
 			</ul>
 		</div>
 		<div class="close-button" on:click>
@@ -57,6 +67,7 @@
 		cursor: pointer;
 		transition: all 1s ease;
 		outline: none;
+		filter: invert(1);
 	}
 	.close-button:hover {
 		transform: rotate(180deg);
@@ -65,6 +76,19 @@
 		width: 250px;
 		margin: 0;
 		padding: 0px 0 0 0;
-		filter: invert(100%);
+	}
+
+	ul {
+		list-style: none;
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: bold;
+		transition: all 0.3s ease;
+		outline: none;
 	}
 </style>

@@ -2,18 +2,16 @@
 	export async function load({ page, fetch }) {
 		const pagination = page.query.get('page') ?? 1;
 
+		let PER_PAGE = 2;
 		// calculate start page
-		const startPage = pagination ? parseInt(pagination) : 1;
-		// let startPage = +pagination === 1 ? 0 : (+pagination - 1) * 2;
-		console.log(pagination);
+		let startPage = +pagination === 1 ? 0 : (+pagination - 1) * PER_PAGE;
 
 		// fetch total/count
 		const totalUrl = `http://localhost:1337/posts/count`;
 		const totalRes = await fetch(totalUrl);
-		// // calculate last pages
 
 		// fecth articles
-		const url = `http://localhost:1337/posts?=_sort=date:DESC&_start=${startPage}&_limit=3`;
+		const url = `http://localhost:1337/posts?=_sort=date:DESC&_start=${startPage}&_limit=${PER_PAGE}`;
 
 		const articelRes = await fetch(url);
 
@@ -41,11 +39,12 @@
 	export let posts = [];
 	export let pagination;
 	export let total;
-	let lastPage = Math.ceil(total / 3);
+	// change number of posts per page if change limit in query
+	let lastPage = Math.ceil(total / 2); // change num);
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>NetViews</title>
 	<meta name="keywords" content="blog, svelte, sveltejs, svelte.dev, sveltejs.com," />
 </svelte:head>
 

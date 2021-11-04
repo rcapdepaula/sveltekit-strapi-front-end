@@ -29,9 +29,11 @@
 	<div class="post-card">
 		{#each posts as post (post.id)}
 			<div animate:flip={{ duration: 500 }}>
-				<PostList {post} />
-
-				<h1>No posts</h1>
+				{#if posts.length > 0}
+					<PostList {post} />
+				{:else}
+					<p>No posts found</p>
+				{/if}
 			</div>
 		{/each}
 	</div>

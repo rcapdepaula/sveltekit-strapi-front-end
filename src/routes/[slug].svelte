@@ -14,38 +14,37 @@
 </script>
 
 <script>
+	import BreadCrumb from '../components/BreadCrumb.svelte';
+	import AuthorBox from '../components/AuthorBox.svelte';
 	import { fly } from 'svelte/transition';
 	export let post;
+
+	// output post content markdown to html
+	import marked from 'marked';
+	export let content = marked(post.content);
 </script>
 
 <svelte:head>
-	<title>{post.title}</title>
+	<title>NetViews - {post.title}</title>
+	<meta name="description" content={post.description} />
+	<meta name="keywords" content={post.keywords} />
 </svelte:head>
 
 <article in:fly>
 	<div class="mobile-display">
+		<BreadCrumb crumb={post} />
+		<p class="m-author">Autor: {post.author.username}</p>
+		<p class="m-date">Postado em: {new Date(post.created_at).toLocaleDateString()}</p>
 		<h1>
 			{post.title}
 		</h1>
+		<!-- // post content here -->
 		<div>
-			{@html post.content}
+			{@html content}
 		</div>
+		<!-- // post content here -->
 
-		<div class="author-box">
-			<img
-				src={post.writer.image.formats.thumbnail.url}
-				alt={post.writer.name}
-				class="author-box-img"
-			/>
-			<div class="author-info">
-				<span class="author-name">
-					{post.writer.name}
-				</span>
-				<p class="author-bio">
-					{post.writer.bio}
-				</p>
-			</div>
-		</div>
+		<AuthorBox author={post.writer} />
 	</div>
 </article>
 
@@ -60,59 +59,11 @@
 		max-width: var(--max-width);
 		margin: 62px auto;
 	}
-
-	.author-box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 20px;
-		box-shadow: rgb(149 157 165 / 20%) -4px -4px 24px;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
-		width: fit-content;
-		padding: 20px 42px 20px 42px;
-		max-width: 906px;
+	.m-author {
+		margin: 10px 0px 0px 0px;
 	}
 
-	.author-info {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		margin-left: 20px;
-	}
-
-	@media (max-width: 768px) {
-		.author-box {
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.author-info {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			margin-left: 0px;
-		}
-	}
-
-	.author-box-img {
-		border-radius: 100%;
-		margin: 0;
-	}
-
-	.author-name {
-		margin-top: 20px;
-		font-weight: 700;
-	}
-
-	.author-bio {
-		margin-top: 10px;
-		font-size: 1rem;
-		max-width: 726px;
-		margin-bottom: 0;
+	.m-date {
+		margin: 10px 0px 30px 0px;
 	}
 </style>

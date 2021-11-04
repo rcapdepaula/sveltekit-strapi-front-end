@@ -34,7 +34,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		height: 80px;
+		height: 100px;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;

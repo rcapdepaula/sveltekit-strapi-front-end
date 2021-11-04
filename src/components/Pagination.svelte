@@ -4,20 +4,12 @@
 	export let lastPage;
 </script>
 
-<!--HTML here-->
-
-<!-- {#if pagination != 1}
-	<div>
-		<h3>Página {pagination} / {lastPage}</h3>
-	</div>
-{/if} -->
-
 <div class="container">
 	{#if pagination > 1}
-		<a class="nav-back" href="?page={pagination - 1}">Previous</a>
+		<a class="nav-back" href="?page={pagination - 1}">Anterior</a>
 	{/if}
 	{#if pagination < lastPage}
-		<a class="navForward" href="?page={pagination + 1}">Next</a>
+		<a class="navForward" href="?page={pagination + 1}">Próximo</a>
 	{/if}
 </div>
 
@@ -34,36 +26,31 @@
 	}
 
 	.nav-back {
-		font-family: 'Inter', Arial, Helvetica, sans-serif;
+		font-family: 'Arial', Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 800;
 		color: #fff;
 		position: relative;
 		width: 120px;
-		height: 30px;
+		height: 34px;
 		display: block;
 		background: #000;
 		padding: 3px 10px 0 25px;
-		margin-bottom: 10px;
-	}
-
-	@media (max-width: 768px) {
-		.nav-back {
-			margin-left: 20px;
-		}
+		margin-bottom: -14px;
+		text-align: end;
 	}
 
 	.nav-back:before {
 		display: block;
 		position: absolute;
-		left: -15px;
-		top: 50%;
+		left: -7px;
+		top: 45%;
 		margin: 0;
 		border: solid;
 		content: '';
 		pointer-events: none;
 		border-right-color: #000;
-		border-width: 15px;
+		border-width: 17px;
 		margin-top: -15px;
 	}
 
@@ -74,37 +61,34 @@
 		border-right-color: var(--med-grey);
 	}
 	.navForward {
-		font-family: 'Inter', Arial, Helvetica, sans-serif;
+		font-family: 'Arial', Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 800;
 		color: #fff;
 		position: relative;
 		width: 120px;
-		height: 30px;
+		height: 34px;
 		display: block;
 		background: #000;
 		padding: 3px 10px 0 5px;
-		margin-bottom: 30px;
-		text-align: center;
+		margin-bottom: -14px;
+		text-align: start;
 	}
-
-	@media (max-width: 768px) {
-		.navForward {
-			margin-left: 20px;
-		}
+	a.navForward {
+		padding-left: 10px;
 	}
 
 	.navForward:after {
 		display: block;
 		position: absolute;
-		left: 90%;
-		top: 50%;
+		left: 93px;
+		top: 45%;
 		margin: 0;
 		border: solid;
 		content: '';
 		pointer-events: none;
 		border-left-color: #000;
-		border-width: 15px;
+		border-width: 17px;
 		margin-top: -15px;
 	}
 	.navForward:hover {

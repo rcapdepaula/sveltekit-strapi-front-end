@@ -35,15 +35,22 @@
 	.search-bar-container-content {
 		position: relative;
 		max-width: var(--max-width);
-		width: 100%;
+		width: 50%;
 		height: 32px;
 		background: var(--elegant-grey);
 		margin: 0 auto;
-		border-radius: 40px;
+		border-radius: 6px;
 		color: var(--white);
 	}
+
+	@media (max-width: 768px) {
+		.search-bar-container-content {
+			width: 100%;
+		}
+	}
+
 	input {
-		font-size: 24px;
+		font-size: 20px;
 		position: absolute;
 		left: 0px;
 		margin: 0;

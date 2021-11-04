@@ -27,7 +27,7 @@
 
 	.nav-back {
 		font-family: 'Arial', Helvetica, sans-serif;
-		font-size: 1rem;
+		font-size: 15px;
 		font-weight: 800;
 		color: #fff;
 		position: relative;
@@ -38,6 +38,12 @@
 		padding: 3px 10px 0 25px;
 		margin-bottom: -14px;
 		text-align: end;
+	}
+
+	@media (max-width: 768px) {
+		.nav-back {
+			height: 33.2px;
+		}
 	}
 
 	.nav-back:before {
@@ -62,7 +68,7 @@
 	}
 	.navForward {
 		font-family: 'Arial', Helvetica, sans-serif;
-		font-size: 1rem;
+		font-size: 15px;
 		font-weight: 800;
 		color: #fff;
 		position: relative;
@@ -73,6 +79,12 @@
 		padding: 3px 10px 0 5px;
 		margin-bottom: -14px;
 		text-align: start;
+	}
+
+	@media (max-width: 768px) {
+		.navForward {
+			height: 33.2px;
+		}
 	}
 	a.navForward {
 		padding-left: 10px;

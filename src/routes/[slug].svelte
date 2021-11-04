@@ -1,7 +1,7 @@
 <script context="module">
 	export async function load({ page }) {
 		const slug = page.params.slug;
-		const url = 'http://localhost:1337/posts';
+		const url = 'https://sveltestrapiblog.herokuapp.com/posts';
 		const res = await fetch(`${url}?slug=${slug}`);
 		const article = await res.json();
 

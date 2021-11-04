@@ -7,11 +7,11 @@
 		let startPage = +pagination === 1 ? 0 : (+pagination - 1) * PER_PAGE;
 
 		// fetch total/count
-		const totalUrl = `http://localhost:1337/posts/count`;
+		const totalUrl = `https://sveltestrapiblog.herokuapp.com/posts/count`;
 		const totalRes = await fetch(totalUrl);
 
 		// fecth articles
-		const url = `http://localhost:1337/posts?=_sort=date:DESC&_start=${startPage}&_limit=${PER_PAGE}`;
+		const url = `https://sveltestrapiblog.herokuapp.com/posts?_sort=created_at:DESC&_start=${startPage}&_limit=${PER_PAGE}`;
 
 		const articelRes = await fetch(url);
 

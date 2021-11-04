@@ -1,7 +1,7 @@
 <script context="module">
 	export async function load({ page, fetch }) {
 		const term = page.query.get('term');
-		const url = 'http://localhost:1337/posts';
+		const url = 'https://sveltestrapiblog.herokuapp.com/posts';
 		const data = await fetch(`${url}?description_contains=${term}`);
 
 		if (data.ok) {

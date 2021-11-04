@@ -25,7 +25,7 @@
 			<img src="images/folder-open-solid.svg" alt="categorias" class="icon-categories" />
 			{#each post.categories as category (category.id)}
 				<span class="category">
-					<a href={`/category?term=${category.name}`}>
+					<a class="item" href={`/category?term=${category.name}`}>
 						{category.name}
 					</a>
 				</span>
@@ -52,6 +52,11 @@
 
 	a {
 		font-family: 'Archivo Black', sans-serif;
+		line-height: 2rem;
+	}
+
+	.item {
+		font-family: 'Arial', sans-serif;
 		line-height: 2rem;
 	}
 

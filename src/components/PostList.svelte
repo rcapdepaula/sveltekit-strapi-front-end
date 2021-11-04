@@ -7,9 +7,9 @@
 <!--HTML here-->
 <div in:scale out:scale|local>
 	{#if post.image}
-		<img src={post.image.formats.medium.url} alt={post.title} />
+		<img src={post.image.formats.medium.url} alt={post.title} loading="lazy" />
 	{:else}
-		<img src="images/900x600.png" alt={post.title} />
+		<img src="images/900x600.png" alt={post.title} loading="lazy" />
 	{/if}
 
 	<div class="mobile-display">

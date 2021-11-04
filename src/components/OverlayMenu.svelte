@@ -11,13 +11,13 @@
 			</div>
 
 			<ul>
-				<li>
+				<li on:click>
 					<a href="/">Home</a>
 				</li>
-				<li>
+				<li on:click>
 					<a href="/sobre">Sobre</a>
 				</li>
-				<li>
+				<li on:click>
 					<a href="/contato">Contato</a>
 				</li>
 			</ul>

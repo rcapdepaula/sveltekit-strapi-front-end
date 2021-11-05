@@ -9,17 +9,15 @@
 <div class="container" in:fly>
 	<h1>Sobre</h1>
 	<div class="about">
-		<img src="images/ricardodepaula.png" alt="Ricardo de Paula" loading="lazy" />
+		<img src="images/ricardodepaula.jpg" alt="Ricardo de Paula" />
 		<div class="text">
 			<h2>Ricardo de Paula</h2>
 			<p>
-				I'm baby four dollar toast iPhone migas cred everyday carry deep v health goth ethical vape
-				four loko. Lomo offal austin pour-over mlkshk, schlitz neutra roof party palo santo vinyl
-				literally man braid. Biodiesel bushwick typewriter beard 3 wolf moon pop-up aesthetic. Umami
-				photo booth ugh keytar man bun meh migas single-origin coffee put a bird on it lumbersexual
-				seitan. Poke listicle biodiesel photo booth unicorn seitan. Chillwave wolf mustache DIY
-				iPhone. Farm-to-table craft beer iPhone, marfa street art plaid tumblr pickled before they
-				sold out tacos YOLO.
+				Vejo o desenvolvimento Web como um universo que está em constante expansão, se mexendo,
+				sempre em movimento. Novas tecnologias surgem e orbitam em torno dos mundos já existentes,
+				mutáveis, que evoluem de tempos em tempos, em seu ciclo efêmero ou duradouro. Minha busca
+				insistente em explorar esses mundos, vem me transformando em um especialista. Sempre à
+				procura de conhecimento, desenvolmento profissional e pessoal.
 			</p>
 		</div>
 	</div>
@@ -65,7 +63,7 @@
 	}
 	.about img {
 		width: 450px;
-		height: 450px;
-		border-radius: 100px;
+		height: auto;
+		border-radius: 5px;
 	}
 </style>

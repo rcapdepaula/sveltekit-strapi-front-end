@@ -77,7 +77,7 @@
 		overflow: hidden;
 		position: relative;
 		letter-spacing: 1.5px;
-		height: 56px;
+		height: 57px;
 	}
 	.fade-truncate:after {
 		position: absolute;
@@ -85,7 +85,7 @@
 		bottom: 0;
 		right: 0;
 		width: 150px;
-		height: 1.2em;
+		height: 1.4em;
 		background: linear-gradient(to right, transparent, var(--white) 50%);
 	}
 	p.fade-truncate {

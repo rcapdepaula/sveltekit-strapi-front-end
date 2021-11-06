@@ -3,6 +3,8 @@
 :root {
 	--max-width: 1180px;
 	--white: #fff;
+	--purple: #483f81;
+	--purple-light: #485f8b;
 	--black: #000;
 	--my-color: rgb(255, 152, 0);
 	--sucess: #5cb85c;

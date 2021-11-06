@@ -28,7 +28,7 @@
 		display: flex;
 		align-items: center;
 		height: 56px;
-		background: var(--med-grey);
+		background: var(--purple-light);
 		padding: 0 20px;
 	}
 

@@ -38,7 +38,7 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		background-color: var(--dark-grey);
+		background-color: var(--purple);
 		overflow: hidden;
 		align-items: start;
 	}

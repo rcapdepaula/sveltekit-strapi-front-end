@@ -43,7 +43,7 @@
 </script>
 
 <svelte:head>
-	<title>NetViews</title>
+	<title>NetViews - Blog sobre Svelte, SvelteKit, HTML, CSS e javascript.</title>
 	<meta
 		name="keywords"
 		content="blog, svelte, sveltejs, svelte.dev, sveltejs.com, javascript, html, css, SEO"

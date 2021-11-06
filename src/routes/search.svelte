@@ -29,7 +29,7 @@
 	<div class="post-card">
 		{#each posts as post (post.id)}
 			<div animate:flip={{ duration: 500 }}>
-				{#if posts.length > 0}
+				{#if post}
 					<PostList {post} />
 				{:else}
 					<p>No posts found</p>

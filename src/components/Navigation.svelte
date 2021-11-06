@@ -24,7 +24,7 @@
 	}
 	.logo {
 		width: 220px;
-		height: auto;
+		height: 51.45px;
 		max-width: 100%;
 		margin: 13px;
 	}

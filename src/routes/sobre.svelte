@@ -19,6 +19,10 @@
 				insistente em explorar esses mundos, vem me transformando em um especialista. Sempre à
 				procura de conhecimento, desenvolmento profissional e pessoal.
 			</p>
+			<p>
+				Possuo dois dos certificados mais respeitados do Brasil pela ComSchool, empresa do grupo
+				Magalu, que me deu um background fantástico, que vai além puramente do desenvolvimento Web.
+			</p>
 		</div>
 	</div>
 </div>

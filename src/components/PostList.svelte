@@ -6,9 +6,14 @@
 
 <!--HTML here-->
 <div in:scale out:scale|local>
+	<!-- // if item in array is greater than 2 set lazy-->
 	{#if post.image}
+		<img src={post.image.formats.medium.url} alt={post.title} />
+	{:else if post.image.indexOf >= 3}
+		<!-- lazy images -->
 		<img src={post.image.formats.medium.url} alt={post.title} loading="lazy" />
 	{:else}
+		<!-- placeholder -->
 		<img src="images/900x600.png" alt={post.title} loading="lazy" />
 	{/if}
 
@@ -72,7 +77,7 @@
 		overflow: hidden;
 		position: relative;
 		letter-spacing: 1.5px;
-		height: 53px;
+		height: 54px;
 	}
 	.fade-truncate:after {
 		position: absolute;

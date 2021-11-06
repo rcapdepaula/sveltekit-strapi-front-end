@@ -14,7 +14,7 @@
 			<h2>Ricardo de Paula</h2>
 			<p>
 				Vejo o desenvolvimento Web como um universo que está em constante expansão, se mexendo,
-				sempre em movimento. Novas tecnologias surgem e orbitam em torno dos mundos já existentes,
+				sempre em movimento. Novas tecnologias surgem e orbitam em torno de mundos já existentes,
 				mutáveis, que evoluem de tempos em tempos, em seu ciclo efêmero ou duradouro. Minha busca
 				insistente em explorar esses mundos, vem me transformando em um especialista. Sempre à
 				procura de conhecimento, desenvolmento profissional e pessoal.

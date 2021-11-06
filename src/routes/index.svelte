@@ -33,7 +33,6 @@
 </script>
 
 <script>
-	import { scale } from 'svelte/transition';
 	import PostList from '../components/PostList.svelte';
 	import Pagination from '../components/Pagination.svelte';
 	export let posts = [];
@@ -48,7 +47,7 @@
 	<meta name="keywords" content="blog, svelte, sveltejs, svelte.dev, sveltejs.com," />
 </svelte:head>
 
-<div class="container" in:scale>
+<div class="container">
 	<!-- posts list component -->
 	<div class="post-card">
 		{#each posts as post (post.id)}

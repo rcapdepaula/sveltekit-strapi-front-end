@@ -62,6 +62,8 @@
 
 	img {
 		margin: 0;
+		width: 580px;
+		height: 386.66px;
 	}
 
 	.fade-truncate {
@@ -92,6 +94,12 @@
 	@media (max-width: 768px) {
 		.categories {
 			justify-content: center;
+		}
+
+		img {
+			margin: 0;
+			width: 486px;
+			height: 322px;
 		}
 	}
 	.category {

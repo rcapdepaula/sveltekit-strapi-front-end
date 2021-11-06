@@ -44,7 +44,14 @@
 
 <svelte:head>
 	<title>NetViews</title>
-	<meta name="keywords" content="blog, svelte, sveltejs, svelte.dev, sveltejs.com," />
+	<meta
+		name="keywords"
+		content="blog, svelte, sveltejs, svelte.dev, sveltejs.com, javascript, html, css, SEO"
+	/>
+	<meta
+		name="description"
+		content="NetViews é um blog que fala principalmente sobre Svelte e SvelteKit. Com muitas informações sobre HTML, CSS, SEO e javascript. Com uma abordagem de fácil entendimento sobre esses temas, tentando simplificar ao máximo o meu aprendizado e também o seu."
+	/>
 </svelte:head>
 
 <div class="container">

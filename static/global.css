@@ -551,6 +551,7 @@ ol li {
 }
 ul li {
 	padding-left: 0;
+	text-align: left;
 }
 li > ol {
 	margin-left: 1.45rem;

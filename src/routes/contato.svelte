@@ -62,6 +62,7 @@
 						id="name"
 						placeholder="nome..."
 						bind:value={fields.name}
+						required
 					/></label
 				>
 				<div class="error">
@@ -70,18 +71,13 @@
 			</div>
 			<div class="email">
 				<label for="email"
-					>Seu Email: <input
-						type="email"
-						required
-						class="ml"
-						name="email"
-						placeholder="email..."
-					/></label
+					>Seu Email: <input type="email" class="ml" name="email" placeholder="email..." /></label
 				>
 			</div>
 			<div class="message">
 				<label for="message"
 					>Mensagem: <textarea
+						required
 						name="message"
 						placeholder="mensagem..."
 						id="message"
@@ -124,18 +120,19 @@
 			text-align: left;
 		}
 		.form {
-			display: flex;
-			flex-direction: column;
+			display: grid;
+
 			justify-content: space-between;
 		}
 		.ml {
 			margin-left: 3px;
 		}
 		.email {
-			margin-top: 20px;
+			grid-column: 1 / 2;
 		}
 		.message {
 			margin-top: 20px;
+			width: 350px;
 		}
 	}
 	.error {

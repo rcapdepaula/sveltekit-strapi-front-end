@@ -14,7 +14,7 @@
 	<h1>Contato</h1>
 
 	<form name="contact" method="post" netlify netlify-honeypot="bot-field">
-		<input type="hidden" name="contact" value="contact" />
+		<input type="hidden" name="form-name" value="contact" />
 		<!-- <input type="text" name="bot-field" /> -->
 		<p>
 			<label>Seu Nome: <input type="text" name="name" /></label>

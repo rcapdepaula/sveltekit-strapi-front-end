@@ -82,6 +82,10 @@
 		list-style: none;
 		text-align: center;
 	}
+	ul li {
+		list-style: none;
+		text-align: center;
+	}
 
 	a {
 		text-decoration: none;

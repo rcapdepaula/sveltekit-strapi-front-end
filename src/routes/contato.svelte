@@ -4,6 +4,40 @@
 
 <script>
 	import { fly } from 'svelte/transition';
+	let fields = {
+		name: '',
+		message: ''
+	};
+	let errors = {
+		name: '',
+		message: ''
+	};
+	let valid = false;
+
+	const submitHandler = () => {
+		valid = true;
+		// validade name
+		if (fields.name.trim().length < 3) {
+			valid = false;
+			errors.name = 'O nome deve ter pelo menos 3 caracteres';
+		} else {
+			errors.name = '';
+		}
+		// validate email
+
+		// validate message
+		if (fields.message.trim().length < 20) {
+			valid = false;
+			errors.message = 'O nome deve ter pelo menos 20 caracteres';
+		} else {
+			errors.message = '';
+		}
+
+		// submit form
+		if (valid) {
+			document.forms['contact'].submit();
+		}
+	};
 </script>
 
 <svelte:head>
@@ -13,21 +47,50 @@
 <div class="container" in:fly>
 	<h1>Contato</h1>
 
-	<form name="contact" method="post" netlify netlify-honeypot="bot-field">
+	<form
+		on:submit|preventDefault={submitHandler}
+		name="contact"
+		method="post"
+		netlify
+		netlify-honeypot="bot-field"
+	>
 		<input type="hidden" name="form-name" value="contact" />
 		<!-- <input type="text" name="bot-field" /> -->
 		<div class="form">
 			<div class="name">
-				<label>Seu Nome: <input type="text" name="name" /></label>
+				<label for="name"
+					>Seu Nome: <input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="nome..."
+						bind:value={fields.name}
+					/></label
+				>
+				<div>
+					{errors.name}
+				</div>
 			</div>
 			<div class="email">
-				<label>Seu Email: <input type="email" class="ml" name="email" /></label>
+				<label for="email"
+					>Seu Email: <input type="email" class="ml" name="email" placeholder="email..." /></label
+				>
 			</div>
 			<div class="message">
-				<label>Mensagem: <textarea name="message" /></label>
+				<label for="message"
+					>Mensagem: <textarea
+						name="message"
+						placeholder="mensagem..."
+						id="message"
+						bind:value={fields.message}
+					/></label
+				>
+				<div>
+					{errors.message}
+				</div>
 
 				<p>
-					<button type="submit">Enviar</button>
+					<button>Enviar</button>
 				</p>
 			</div>
 		</div>

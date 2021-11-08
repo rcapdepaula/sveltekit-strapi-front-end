@@ -43,14 +43,44 @@
 </script>
 
 <svelte:head>
+	<!-- Primary Meta Tags -->
 	<title>NetViews - Blog sobre Svelte, SvelteKit, HTML, CSS e javascript.</title>
-	<meta
-		name="keywords"
-		content="blog, svelte, sveltejs, svelte.dev, sveltejs.com, javascript, html, css, SEO"
-	/>
+	<meta name="title" content="NetViews - Blog sobre Svelte, SvelteKit, HTML, CSS e javascript." />
 	<meta
 		name="description"
 		content="NetViews é um blog que fala principalmente sobre Svelte e SvelteKit. Com muitas informações sobre HTML, CSS, SEO e javascript. Com uma abordagem de fácil entendimento sobre esses temas, tentando simplificar ao máximo o meu aprendizado e também o seu."
+	/>
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://netviews.net/" />
+	<meta
+		property="og:title"
+		content="NetViews - Blog sobre Svelte, SvelteKit, HTML, CSS e javascript."
+	/>
+	<meta
+		property="og:description"
+		content="NetViews é um blog que fala principalmente sobre Svelte e SvelteKit. Com muitas informações sobre HTML, CSS, SEO e javascript. Com uma abordagem de fácil entendimento sobre esses temas, tentando simplificar ao máximo o meu aprendizado e também o seu."
+	/>
+	<meta
+		property="og:image"
+		content="https://res.cloudinary.com/dqffeckng/image/upload/v1635254764/pessoas_olhando_smartphone_video_marketing_e76e39657a.jpg"
+	/>
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://netviews.net/" />
+	<meta
+		property="twitter:title"
+		content="NetViews - Blog sobre Svelte, SvelteKit, HTML, CSS e javascript."
+	/>
+	<meta
+		property="twitter:description"
+		content="NetViews é um blog que fala principalmente sobre Svelte e SvelteKit. Com muitas informações sobre HTML, CSS, SEO e javascript. Com uma abordagem de fácil entendimento sobre esses temas, tentando simplificar ao máximo o meu aprendizado e também o seu."
+	/>
+	<meta
+		property="twitter:image"
+		content="https://res.cloudinary.com/dqffeckng/image/upload/v1635254764/pessoas_olhando_smartphone_video_marketing_e76e39657a.jpg"
 	/>
 </svelte:head>
 

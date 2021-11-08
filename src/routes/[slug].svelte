@@ -28,6 +28,26 @@
 	<title>NetViews - {post.title}</title>
 	<meta name="description" content={post.description} />
 	<meta name="keywords" content={post.keywords} />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://netviews.net" />
+	<meta property="og:title" content="O que são e quais são os eventos do HTML5?" />
+	<meta
+		property="og:description"
+		content="Nesse post falo sobre os eventos do HTML5. Eventos são gatilhos disparados, na sua maioria com base com interações de usuários. Geralmente são ligados a algum código javascript após o seu disparo."
+	/>
+	<meta property="og:image" content={post.image.formats.large.url} />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://netviews.net" />
+	<meta property="twitter:title" content="O que são e quais são os eventos do HTML5?" />
+	<meta
+		property="twitter:description"
+		content="Nesse post falo sobre os eventos do HTML5. Eventos são gatilhos disparados, na sua maioria com base com interações de usuários. Geralmente são ligados a algum código javascript após o seu disparo."
+	/>
+	<meta property="twitter:image" content={post.image.formats.large.url} />
 </svelte:head>
 
 <article in:fly>

@@ -9,7 +9,7 @@
 	<!-- // if item in array is greater than 2 set lazy-->
 	{#if post.image}
 		<img src={post.image.formats.medium.url} alt={post.title} />
-	{:else if post.image.indexOf >= 3}
+	{:else if post.image.indexOf >= 2}
 		<!-- lazy images -->
 		<img src={post.image.formats.medium.url} alt={post.title} loading="lazy" />
 	{:else}

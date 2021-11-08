@@ -22,9 +22,9 @@
 	export let posts = [];
 </script>
 
-<head>
+<svelte:head>
 	<title>Resultados</title>
-</head>
+</svelte:head>
 <div class="container" in:scale>
 	<div class="post-card">
 		{#each posts as post (post.id)}

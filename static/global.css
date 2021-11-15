@@ -443,6 +443,7 @@ pre {
 	overflow: auto;
 	word-wrap: normal;
 	padding: 1.45rem;
+	text-align: left;
 }
 table {
 	margin-left: 0;

@@ -5,11 +5,11 @@
 </script>
 
 <!--HTML here-->
-<div in:scale out:scale|local>
-	<!-- // if item in array is greater than 2 set lazy-->
+<div>
+	<!-- // if item in array is greater than 0 set lazy-->
 	{#if post.image}
 		<img src={post.image.formats.medium.url} alt={post.title} />
-	{:else if post.image.indexOf >= 2}
+	{:else if post.image.findIndex((x) => x.formats.medium.url) > 0}
 		<!-- lazy images -->
 		<img src={post.image.formats.medium.url} alt={post.title} loading="lazy" />
 	{:else}

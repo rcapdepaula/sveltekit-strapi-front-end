@@ -11,7 +11,7 @@
 		<img
 			src={post.image.formats.medium.url}
 			alt={post.title}
-			loading={post.id == 2 ? 'eager' : 'lazy'}
+			loading={post.id < 3 ? 'lazy' : 'eager'}
 		/>
 	{:else}
 		<!-- if no images then placeholder -->

@@ -1,19 +1,20 @@
 <script>
 	// Script will be here
 	export let post;
-	import { scale } from 'svelte/transition';
 </script>
 
 <!--HTML here-->
 <div>
-	<!-- // if item in array is greater than 0 set lazy-->
+	<!-- display posts images -->
 	{#if post.image}
-		<img src={post.image.formats.medium.url} alt={post.title} />
-	{:else if post.image.findIndex((x) => x.formats.medium.url) > 0}
-		<!-- lazy images -->
-		<img src={post.image.formats.medium.url} alt={post.title} loading="lazy" />
+		<!--check if image is not empty -->
+		<img
+			src={post.image.formats.medium.url}
+			alt={post.title}
+			loading={post.id == 2 ? 'eager' : 'lazy'}
+		/>
 	{:else}
-		<!-- placeholder -->
+		<!-- if no images then placeholder -->
 		<img src="images/900x600.png" alt={post.title} loading="lazy" />
 	{/if}
 

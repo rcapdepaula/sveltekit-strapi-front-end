@@ -9,7 +9,7 @@
 <div class="container" in:fly>
 	<h1>Sobre</h1>
 	<div class="about">
-		<img src="images/ricardodepaula.jpg" alt="Ricardo de Paula" />
+		<img src="images/ricardodepaula.jpg" alt="Ricardo de Paula" loading="eager" />
 		<div class="text">
 			<h2>Ricardo de Paula</h2>
 			<p>

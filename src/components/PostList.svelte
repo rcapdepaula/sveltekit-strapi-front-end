@@ -49,6 +49,7 @@
 
 <style>
 	/* styles here */
+
 	@media (max-width: 768px) {
 		.mobile-display {
 			padding: 20px;
@@ -97,7 +98,7 @@
 		align-items: center;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 836px) {
 		.categories {
 			justify-content: center;
 		}

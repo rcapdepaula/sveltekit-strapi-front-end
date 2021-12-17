@@ -1,16 +1,9 @@
-import adapter from '@sveltejs/adapter-netlify';
+import vercel from '@sveltejs/adapter-vercel';
 
 export default {
 	kit: {
-		adapter: adapter(), // currently the adapter does not take any options
+		adapter: vercel(), // currently the adapter does not take any options
 		target: '#svelte',
-
-		// prerender 
-		prerender:{
-			enabled: true,
-			crawl: true,
-			entries:['*']
-		}
 
 	}
 };

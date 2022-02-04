@@ -1,9 +1,13 @@
-import vercel from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-auto';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
-		adapter: vercel(), // currently the adapter does not take any options
-		target: '#svelte',
+		adapter: adapter(),
 
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte'
 	}
 };
+
+export default config;

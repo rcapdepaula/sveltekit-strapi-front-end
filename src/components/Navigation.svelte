@@ -5,12 +5,12 @@
 <!--HTML here-->
 <nav>
 	<div class="container">
-		<a href="/" class="logo-padding" alt="home">
+		<a sveltekit:prefetch href="/" class="logo-padding" alt="home">
 			<img src="images/logo-white.svg" alt="" class="logo" />
 		</a>
 		<ul>
-			<li><a href="/sobre">Sobre</a></li>
-			<li><a href="/contato">Contato</a></li>
+			<li><a sveltekit:prefetch href="/sobre">Sobre</a></li>
+			<li><a sveltekit:prefetch href="/contato">Contato</a></li>
 		</ul>
 	</div>
 </nav>

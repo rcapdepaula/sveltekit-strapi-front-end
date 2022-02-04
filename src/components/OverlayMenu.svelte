@@ -12,13 +12,13 @@
 
 			<ul>
 				<li on:click>
-					<a href="/">Home</a>
+					<a sveltekit:prefetch href="/">Home</a>
 				</li>
 				<li on:click>
-					<a href="/sobre">Sobre</a>
+					<a sveltekit:prefetch href="/sobre">Sobre</a>
 				</li>
 				<li on:click>
-					<a href="/contato">Contato</a>
+					<a sveltekit:prefetch href="/contato">Contato</a>
 				</li>
 			</ul>
 		</div>

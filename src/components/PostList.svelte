@@ -20,7 +20,7 @@
 
 	<div class="mobile-display">
 		<h3>
-			<a href={post.slug}>
+			<a sveltekit:prefetch href={post.slug}>
 				{post.title}
 			</a>
 		</h3>
@@ -31,7 +31,7 @@
 			<img src="images/folder-open-solid.svg" alt="categorias" class="icon-categories" />
 			{#each post.categories as category (category.id)}
 				<span class="category">
-					<a class="item" href={`/category?term=${category.name}`}>
+					<a sveltekit:prefetch class="item" href={`/category?term=${category.name}`}>
 						{category.name}
 					</a>
 				</span>
